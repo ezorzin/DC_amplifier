@@ -1,0 +1,8 @@
+* BC337-16 model created using Parts version 5.2 on 03/24/102 at 19:20 
+* (+Rb din car.exp:+.25V/20mA)
+*
+.model BC337-16 NPN(Is=50f Xti=3 Eg=1.11 Vaf=50 Bf=157.7 Ise=8.767f
++               Ne=1.367 Ikf=1.358 Nk=.4327 Xtb=1.5 Br=7.853 Isc=400E-18
++               Nc=1.18 Ikr=20.28 Rc=.9341 Cjc=12p Mjc=.3333 Vjc=.75 Fc=.5
++               Cje=20p Mje=.3333 Vje=.75 Tr=10n Tf=1.108n Itf=32.52m Xtf=1.755
++               Vtf=10 Rb=12)

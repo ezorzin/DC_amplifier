@@ -1,0 +1,45 @@
+* BDW94 PNP EPITAXIAL SILICON TRANSISTOR ELECTRICAL PARAMETER
+* Power Darlington Transistor 
+* =======================================================================
+* Power Linear and Switching Applications
+* Complement to BDW93, BDW93A, BDW93B and BDW93C Respectively
+* =======================================================================
+* Vcbo & Vceo: BDW94 -45V / BDW94A -60V / BDW94B -80V / BDW94C -100V
+* Ic(DC) -12A / Ic(Pulse) -15A / Ib -0.2A
+* =======================================================================
+* Connections:    Collector 1   Base 2  Emitter 3
+* =======================================================================
+.SUBCKT BDW94    1  2  3
+Q1 1 2 4 Q1model
+Q2 1 4 3 Q2model 5.2266
+D1 1 3 Dmodel
+R1 2 4 10.000E3
+R2 4 3 600
+.MODEL Dmodel D
++ IS=5.29E-12             N=1.087             RS=1.533
++ CJO=3.888136E-10        M=0.3464517         VJ=0.6514732
++ BV=49.0                 IBV=0.1
+.MODEL Q1model PNP
++  IS=1.02E-14            BF=4.297E3           NF=1
++  VAF=55.63              IKF=0.15858          ISE=2.255E-12
++  NE=1.533               BR=4.995             NR=1.1
++  VAR=100                IKR=19.98            ISC=2.38E-9
++  NC=2.997               RB=1.63932           NK=0.5957
++  RE=0.002               RC=0.3025            EG=1.0569
++  CJE=2.248747E-10       VJE=0.8353946        MJE=0.3402586 
++  CJC=2.256645E-10       VJC=0.6074885        MJC=0.2521917 
++  XCJC=0.4445            FC=0.5
+.MODEL Q2model PNP
++  IS=1.02E-14            BF=4.297E3           NF=1
++  VAF=55.63              IKF=0.15858          ISE=2.255E-12
++  NE=1.533               BR=4.995             NR=1.1
++  VAR=100                IKR=19.98            ISC=2.38E-9
++  NC=2.997               RB=1.63932           NK=0.5957
++  RE=0.002               RC=0.3025            EG=1.0569
++  CJE=2.248747E-10       VJE=0.8353946        MJE=0.3402586 
++  CJC=2.256645E-10       VJC=0.6074885        MJC=0.2521917 
++  XCJC=0.4445            FC=0.5
+.ENDS BDW94
+* ======================================================================
+* FAIRCHILD PUCHON S.KOREA     CASE: TO-220      PID: BDW94
+* FEB-02-2001 CREATION

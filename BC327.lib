@@ -1,0 +1,7 @@
+* BC327-16 model created using Parts version 6.0 on 12/06/102 at 08:11
+* Parts is a MicroSim product. (Rb din car.exp: +0.15V/50mA, Isc?)
+*
+.model BC327-16 PNP(Is=50f Xti=3 Eg=1.11 Vaf=50 Bf=160 Ise=.5p Ne=1.5 Ikf=2.5
++               Nk=.9 Xtb=1.5 Var=100 Br=1.4 Isc=.4f Nc=1.32 Ikr=65m Rc=.8
++               Cjc=12p Mjc=.333 Vjc=.75 Fc=.5 Cje=20p Mje=.333 Vje=.75 Tr=10n
++               Tf=1.205n Itf=80.85m Xtf=1.043 Vtf=10 Rb=3)
