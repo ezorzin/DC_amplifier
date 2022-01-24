@@ -14,21 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR07
-U 1 1 60BDCFDD
-P 3450 4450
-F 0 "#PWR07" H 3450 4200 50  0001 C CNN
-F 1 "GND" H 3455 4277 50  0000 C CNN
-F 2 "" H 3450 4450 50  0001 C CNN
-F 3 "" H 3450 4450 50  0001 C CNN
-	1    3450 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 3850 3450 4050
-Text Label 3650 3850 0    50   ~ 0
-V_in
-$Comp
 L power:VCC #PWR013
 U 1 1 60BDD01C
 P 7600 900
@@ -57,15 +42,15 @@ Connection ~ 7600 2450
 $Comp
 L Device:CP C1
 U 1 1 60BDF7A0
-P 6600 3200
-F 0 "C1" H 6718 3246 50  0000 L CNN
-F 1 "10u" H 6718 3155 50  0000 L CNN
-F 2 "" H 6638 3050 50  0001 C CNN
-F 3 "~" H 6600 3200 50  0001 C CNN
-F 4 "C" H 6600 3200 50  0001 C CNN "Spice_Primitive"
-F 5 "10u" H 6600 3200 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6600 3200 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6600 3200
+P 6600 2750
+F 0 "C1" H 6718 2796 50  0000 L CNN
+F 1 "10u" H 6718 2705 50  0000 L CNN
+F 2 "" H 6638 2600 50  0001 C CNN
+F 3 "~" H 6600 2750 50  0001 C CNN
+F 4 "C" H 6600 2750 50  0001 C CNN "Spice_Primitive"
+F 5 "10u" H 6600 2750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6600 2750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6600 2750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -107,10 +92,10 @@ $EndComp
 Wire Wire Line
 	7600 3950 8400 3950
 $Comp
-L Transistor_BJT:BDW94A Q7
+L Transistor_BJT:BDW94A Q8
 U 1 1 60C7E4B0
 P 9050 3950
-F 0 "Q7" H 9241 3904 50  0000 L CNN
+F 0 "Q8" H 9241 3904 50  0000 L CNN
 F 1 "BDW94A" H 9241 3995 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9250 3875 50  0001 L CIN
 F 3 "http://www.bourns.com/data/global/pdfs/bdw94.pdf" H 9050 3950 50  0001 L CNN
@@ -123,10 +108,10 @@ F 8 "2 1 3" H 9050 3950 50  0001 C CNN "Spice_Node_Sequence"
 	1    0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:BDW93A Q6
+L Transistor_BJT:BDW93A Q7
 U 1 1 60C7E4A5
 P 9050 2450
-F 0 "Q6" H 9241 2496 50  0000 L CNN
+F 0 "Q7" H 9241 2496 50  0000 L CNN
 F 1 "BDW93A" H 9241 2405 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9250 2375 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BDW93C-D.pdf" H 9050 2450 50  0001 L CNN
@@ -212,29 +197,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 3550 9150 3650
 Wire Wire Line
-	6600 2450 7100 2450
-Wire Wire Line
-	7250 3200 7300 3200
-Wire Wire Line
-	7600 2450 7600 3000
-Wire Wire Line
-	7600 3400 7600 3950
-Wire Wire Line
-	7100 3350 7100 3950
-Connection ~ 7100 3950
-Wire Wire Line
-	7100 3950 7600 3950
-Wire Wire Line
-	6600 3350 6600 3950
-Wire Wire Line
-	6600 3950 7100 3950
-Wire Wire Line
-	6600 2450 6600 3050
-Wire Wire Line
-	7100 3050 7100 2450
-Connection ~ 7100 2450
-Wire Wire Line
-	7100 2450 7600 2450
+	7250 2750 7300 2750
 Wire Wire Line
 	8700 2750 9150 2750
 Connection ~ 9150 2750
@@ -301,10 +264,10 @@ F 3 "~" H 9150 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC327 Q5
+L Transistor_BJT:BC327 Q6
 U 1 1 60CF1EE0
 P 8500 3650
-F 0 "Q5" H 8691 3604 50  0000 L CNN
+F 0 "Q6" H 8691 3604 50  0000 L CNN
 F 1 "BC327" H 8691 3695 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8700 3575 50  0001 L CIN
 F 3 "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF" H 8500 3650 50  0001 L CNN
@@ -316,10 +279,10 @@ F 7 "BC327.lib" H 8500 3650 50  0001 C CNN "Spice_Lib_File"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:BC337 Q4
+L Transistor_BJT:BC337 Q5
 U 1 1 60CF1ED6
 P 8500 2750
-F 0 "Q4" H 8691 2796 50  0000 L CNN
+F 0 "Q5" H 8691 2796 50  0000 L CNN
 F 1 "BC337" H 8691 2705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8700 2675 50  0001 L CIN
 F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 8500 2750 50  0001 L CNN
@@ -333,23 +296,23 @@ $EndComp
 $Comp
 L Device:R_POT RV1
 U 1 1 60C6DD64
-P 7100 3200
-F 0 "RV1" H 7030 3246 50  0000 R CNN
-F 1 "10k" H 7030 3155 50  0000 R CNN
-F 2 "" H 7100 3200 50  0001 C CNN
-F 3 "~" H 7100 3200 50  0001 C CNN
-F 4 "X" H 7100 3200 50  0001 C CNN "Spice_Primitive"
-F 5 "Y" H 7100 3200 50  0001 C CNN "Spice_Netlist_Enabled"
-F 6 "POT.lib" H 7100 3200 50  0001 C CNN "Spice_Lib_File"
-F 7 "POT VALUE=10k SET=0.27" H 7100 3200 50  0001 C CNN "Spice_Model"
-	1    7100 3200
+P 7100 2750
+F 0 "RV1" H 7030 2796 50  0000 R CNN
+F 1 "10k" H 7030 2705 50  0000 R CNN
+F 2 "" H 7100 2750 50  0001 C CNN
+F 3 "~" H 7100 2750 50  0001 C CNN
+F 4 "X" H 7100 2750 50  0001 C CNN "Spice_Primitive"
+F 5 "Y" H 7100 2750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "POT.lib" H 7100 2750 50  0001 C CNN "Spice_Lib_File"
+F 7 "POT VALUE=10k SET=0.27" H 7100 2750 50  0001 C CNN "Spice_Model"
+	1    7100 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BD135 Q3
+L Transistor_BJT:BD135 Q4
 U 1 1 60BF01A3
 P 7500 4650
-F 0 "Q3" H 7692 4696 50  0000 L CNN
+F 0 "Q4" H 7692 4696 50  0000 L CNN
 F 1 "BD135" H 7692 4605 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 7700 4575 50  0001 L CIN
 F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 7500 4650 50  0001 L CNN
@@ -364,17 +327,17 @@ $EndComp
 $Comp
 L Transistor_BJT:BD135 Q2
 U 1 1 60BEB6C2
-P 7500 3200
-F 0 "Q2" H 7692 3246 50  0000 L CNN
-F 1 "BD135" H 7692 3155 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 7700 3125 50  0001 L CIN
-F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 7500 3200 50  0001 L CNN
-F 4 "Q" H 7500 3200 50  0001 C CNN "Spice_Primitive"
-F 5 "Qbd135" H 7500 3200 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7500 3200 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 3 1" H 7500 3200 50  0001 C CNN "Spice_Node_Sequence"
-F 8 "BD135.lib" H 7500 3200 50  0001 C CNN "Spice_Lib_File"
-	1    7500 3200
+P 7500 2750
+F 0 "Q2" H 7692 2796 50  0000 L CNN
+F 1 "BD135" H 7692 2705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 7700 2675 50  0001 L CIN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 7500 2750 50  0001 L CNN
+F 4 "Q" H 7500 2750 50  0001 C CNN "Spice_Primitive"
+F 5 "Qbd135" H 7500 2750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7500 2750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 3 1" H 7500 2750 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "BD135.lib" H 7500 2750 50  0001 C CNN "Spice_Lib_File"
+	1    7500 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -404,12 +367,6 @@ F 3 "" H 10700 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	8750 3000 7300 3000
-Wire Notes Line
-	7300 3000 7300 3400
-Wire Notes Line
-	7300 3400 8750 3400
-Wire Notes Line
 	8750 3400 8750 4200
 Wire Notes Line
 	8750 4200 9600 4200
@@ -419,17 +376,6 @@ Wire Notes Line
 	9600 2200 8750 2200
 Wire Notes Line
 	8750 2200 8750 3000
-$Comp
-L Device:R R3
-U 1 1 60C5ED56
-P 6000 3200
-F 0 "R3" H 6070 3246 50  0000 L CNN
-F 1 "1k" H 6070 3155 50  0000 L CNN
-F 2 "" V 5930 3200 50  0001 C CNN
-F 3 "~" H 6000 3200 50  0001 C CNN
-	1    6000 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Amplifier_Operational:TL084 U1
 U 2 1 61001204
@@ -460,28 +406,8 @@ F 7 "TL084-quad.lib" H 6750 4650 50  0001 C CNN "Spice_Lib_File"
 	3    6750 4650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Amplifier_Operational:TL084 U1
-U 1 1 610003B9
-P 5200 3950
-F 0 "U1" H 5200 4317 50  0000 C CNN
-F 1 "TL084" H 5200 4226 50  0000 C CNN
-F 2 "" H 5150 4050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl081.pdf" H 5250 4150 50  0001 C CNN
-F 4 "X" H 5200 3950 50  0001 C CNN "Spice_Primitive"
-F 5 "TL084-quad" H 5200 3950 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5200 3950 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "TL084-quad.lib" H 5200 3950 50  0001 C CNN "Spice_Lib_File"
-	1    5200 3950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	4900 4050 4900 6250
-Wire Wire Line
-	5500 3950 6600 3950
-Connection ~ 6600 3950
-Wire Wire Line
-	6000 3350 6000 4550
+	6000 3800 6000 4550
 Wire Wire Line
 	6450 4550 6000 4550
 Connection ~ 6000 4550
@@ -499,29 +425,9 @@ Wire Wire Line
 	6450 1850 6000 1850
 Connection ~ 6000 1850
 Wire Wire Line
-	6000 1850 6000 3050
+	6000 1850 6000 3500
 Wire Wire Line
 	6450 1650 6450 1200
-$Comp
-L power:GND #PWR09
-U 1 1 61036906
-P 4300 4450
-F 0 "#PWR09" H 4300 4200 50  0001 C CNN
-F 1 "GND" H 4305 4277 50  0000 C CNN
-F 2 "" H 4300 4450 50  0001 C CNN
-F 3 "" H 4300 4450 50  0001 C CNN
-	1    4300 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4200 3850 4300 3850
-Wire Wire Line
-	4300 4000 4300 3850
-Connection ~ 4300 3850
-Wire Wire Line
-	4300 3850 4900 3850
-Wire Wire Line
-	4300 4300 4300 4450
 Wire Wire Line
 	9150 3200 9750 3200
 $Comp
@@ -545,21 +451,8 @@ Wire Wire Line
 Wire Wire Line
 	4900 6250 10250 6250
 Wire Wire Line
-	3450 3850 3900 3850
-Wire Wire Line
 	10250 3200 10700 3200
 Connection ~ 10250 3200
-$Comp
-L Device:R R1
-U 1 1 6103815B
-P 4050 3850
-F 0 "R1" V 3843 3850 50  0000 C CNN
-F 1 "1000" V 3934 3850 50  0000 C CNN
-F 2 "" V 3980 3850 50  0001 C CNN
-F 3 "~" H 4050 3850 50  0001 C CNN
-	1    4050 3850
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4650 2350 4650 2450
 Wire Wire Line
@@ -615,20 +508,6 @@ F 5 "TL084-quad" H 4350 1850 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4350 1850 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "TL084-quad.lib" H 4350 1850 50  0001 C CNN "Spice_Lib_File"
 	4    4350 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Simulation_SPICE:VSIN V3
-U 1 1 60BDD085
-P 3450 4250
-F 0 "V3" H 3580 4341 50  0000 L CNN
-F 1 "VSIN" H 3580 4250 50  0000 L CNN
-F 2 "" H 3450 4250 50  0001 C CNN
-F 3 "~" H 3450 4250 50  0001 C CNN
-F 4 "Y" H 3450 4250 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "V" H 3450 4250 50  0001 L CNN "Spice_Primitive"
-F 6 "dc 0 sin(0 8 200k)" H 2450 4250 50  0000 L CNN "Spice_Model"
-	1    3450 4250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -809,19 +688,213 @@ F 7 "1_5KE.lib" H 9750 3500 50  0001 C CNN "Spice_Lib_File"
 	1    9750 3500
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	6600 2450 7100 2450
+$Comp
+L Transistor_BJT:BD136 Q3
+U 1 1 61EFDB83
+P 7500 3650
+F 0 "Q3" H 7692 3604 50  0000 L CNN
+F 1 "BD136" H 7692 3695 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 7700 3575 50  0001 L CIN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 7500 3650 50  0001 L CNN
+F 4 "Q" H 7500 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "Qbd136" H 7500 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7500 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 3 1" H 7500 3650 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "BD136.lib" H 7500 3650 50  0001 C CNN "Spice_Lib_File"
+	1    7500 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 61F004C8
+P 7100 3650
+F 0 "RV2" H 7030 3696 50  0000 R CNN
+F 1 "10k" H 7030 3605 50  0000 R CNN
+F 2 "" H 7100 3650 50  0001 C CNN
+F 3 "~" H 7100 3650 50  0001 C CNN
+F 4 "X" H 7100 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "Y" H 7100 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "POT.lib" H 7100 3650 50  0001 C CNN "Spice_Lib_File"
+F 7 "POT VALUE=10k SET=0.27" H 7100 3650 50  0001 C CNN "Spice_Model"
+	1    7100 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3850 7600 3950
+Wire Wire Line
+	7600 3450 7600 3200
+Wire Wire Line
+	7600 2550 7600 2450
+Wire Wire Line
+	7100 2600 7100 2450
+Connection ~ 7100 2450
+Wire Wire Line
+	7100 2450 7600 2450
+Wire Wire Line
+	7100 2900 7100 3200
+Wire Wire Line
+	7250 3650 7300 3650
+Wire Wire Line
+	7100 3800 7100 3950
+Connection ~ 7100 3950
+Wire Wire Line
+	7100 3950 7600 3950
+Wire Wire Line
+	7600 3200 7100 3200
+Connection ~ 7600 3200
+Wire Wire Line
+	7600 3200 7600 2950
+Connection ~ 7100 3200
+Wire Wire Line
+	7100 3200 7100 3500
+$Comp
+L Device:CP C2
+U 1 1 61F145F4
+P 6600 3650
+F 0 "C2" H 6718 3696 50  0000 L CNN
+F 1 "10u" H 6718 3605 50  0000 L CNN
+F 2 "" H 6638 3500 50  0001 C CNN
+F 3 "~" H 6600 3650 50  0001 C CNN
+F 4 "C" H 6600 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "10u" H 6600 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6600 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6600 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2450 6600 2600
+Wire Wire Line
+	6600 3800 6600 3950
+Wire Wire Line
+	6600 3950 7100 3950
+Wire Wire Line
+	6600 3500 6600 3200
+Wire Wire Line
+	7100 3200 6600 3200
+Connection ~ 6600 3200
+Wire Wire Line
+	6600 3200 6600 2900
 $Comp
 L Diode:1.5KExxCA D3
 U 1 1 61024BBE
-P 4300 4150
-F 0 "D3" V 4254 4230 50  0000 L CNN
-F 1 "1.5KE18CA" V 4345 4230 50  0000 L CNN
-F 2 "Diode_THT:D_DO-201AE_P15.24mm_Horizontal" H 4300 3950 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/88301/15ke.pdf" H 4300 4150 50  0001 C CNN
-F 4 "X" H 4300 4150 50  0001 C CNN "Spice_Primitive"
-F 5 "KE18CA" H 4300 4150 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4300 4150 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "1_5KE.lib" H 4300 4150 50  0001 C CNN "Spice_Lib_File"
-	1    4300 4150
+P 4300 3400
+F 0 "D3" V 4254 3480 50  0000 L CNN
+F 1 "1.5KE18CA" V 4345 3480 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AE_P15.24mm_Horizontal" H 4300 3200 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/88301/15ke.pdf" H 4300 3400 50  0001 C CNN
+F 4 "X" H 4300 3400 50  0001 C CNN "Spice_Primitive"
+F 5 "KE18CA" H 4300 3400 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4300 3400 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1_5KE.lib" H 4300 3400 50  0001 C CNN "Spice_Lib_File"
+	1    4300 3400
 	0    1    1    0   
 $EndComp
+$Comp
+L Simulation_SPICE:VSIN V3
+U 1 1 60BDD085
+P 3450 3500
+F 0 "V3" H 3580 3591 50  0000 L CNN
+F 1 "VSIN" H 3580 3500 50  0000 L CNN
+F 2 "" H 3450 3500 50  0001 C CNN
+F 3 "~" H 3450 3500 50  0001 C CNN
+F 4 "Y" H 3450 3500 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3450 3500 50  0001 L CNN "Spice_Primitive"
+F 6 "dc 0 sin(0 8 200k)" H 2450 3500 50  0000 L CNN "Spice_Model"
+	1    3450 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6103815B
+P 4050 3100
+F 0 "R1" V 3843 3100 50  0000 C CNN
+F 1 "1000" V 3934 3100 50  0000 C CNN
+F 2 "" V 3980 3100 50  0001 C CNN
+F 3 "~" H 4050 3100 50  0001 C CNN
+	1    4050 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 3100 3900 3100
+Wire Wire Line
+	4300 3550 4300 3700
+Wire Wire Line
+	4300 3100 4900 3100
+Connection ~ 4300 3100
+Wire Wire Line
+	4300 3250 4300 3100
+Wire Wire Line
+	4200 3100 4300 3100
+$Comp
+L power:GND #PWR09
+U 1 1 61036906
+P 4300 3700
+F 0 "#PWR09" H 4300 3450 50  0001 C CNN
+F 1 "GND" H 4305 3527 50  0000 C CNN
+F 2 "" H 4300 3700 50  0001 C CNN
+F 3 "" H 4300 3700 50  0001 C CNN
+	1    4300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL084 U1
+U 1 1 610003B9
+P 5200 3200
+F 0 "U1" H 5200 3567 50  0000 C CNN
+F 1 "TL084" H 5200 3476 50  0000 C CNN
+F 2 "" H 5150 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl081.pdf" H 5250 3400 50  0001 C CNN
+F 4 "X" H 5200 3200 50  0001 C CNN "Spice_Primitive"
+F 5 "TL084-quad" H 5200 3200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5200 3200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "TL084-quad.lib" H 5200 3200 50  0001 C CNN "Spice_Lib_File"
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+Text Label 3650 3100 0    50   ~ 0
+V_in
+Wire Wire Line
+	3450 3100 3450 3300
+$Comp
+L power:GND #PWR07
+U 1 1 60BDCFDD
+P 3450 3700
+F 0 "#PWR07" H 3450 3450 50  0001 C CNN
+F 1 "GND" H 3455 3527 50  0000 C CNN
+F 2 "" H 3450 3700 50  0001 C CNN
+F 3 "" H 3450 3700 50  0001 C CNN
+	1    3450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3300 4900 6250
+$Comp
+L Device:R R3
+U 1 1 60C5ED56
+P 6000 3650
+F 0 "R3" H 6070 3696 50  0000 L CNN
+F 1 "1k" H 6070 3605 50  0000 L CNN
+F 2 "" V 5930 3650 50  0001 C CNN
+F 3 "~" H 6000 3650 50  0001 C CNN
+	1    6000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3200 6600 3200
+Wire Notes Line
+	8750 3000 8000 3000
+Wire Notes Line
+	8000 3000 8000 2200
+Wire Notes Line
+	8000 2200 7300 2200
+Wire Notes Line
+	7300 2200 7300 4200
+Wire Notes Line
+	7300 4200 8000 4200
+Wire Notes Line
+	8000 4200 8000 3400
+Wire Notes Line
+	8000 3400 8750 3400
 $EndSCHEMATC
